@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts */
+  --font-inter: "Inter", "system-ui", "sans-serif";
+  --font-space-mono: "Space Mono", "monospace";
+  --font-calistoga: "Calistoga", "cursive";
+
+  /* Light Mode Colors */
+  --color-background: #FFFFFF;
+  --color-foreground: #0A283F;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #0A283F;
+  --color-elevated: #F5F8FB;
+  --color-border: #D9E2EA;
+  --color-text-primary: #0A283F;
+  --color-text-secondary: #0E324D;
+  --color-text-muted: #668DAC;
+  --color-primary: #204E72;
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-hover: #113B5B;
+  --color-primary-light: #B3CCE0;
+  --color-primary-lighter: #8DADC6;
+  --color-success: #3F6038;
+  --color-success-foreground: #B0C9AB;
+  --color-success-hover: #36582F;
+  --color-success-light: #B0C9AB;
+  --color-success-dark: #193D11;
+  --color-warning: #F39C12;
+  --color-warning-foreground: #FCF3CF;
+  --color-warning-hover: #B7950B;
+  --color-warning-light: #FCF3CF;
+  --color-danger: #E74C3C;
+  --color-danger-foreground: #FFFFFF;
+  --color-danger-hover: #C0392B;
+  --color-danger-light: #FADBD8;
+
+  /* Dark Mode Colors (Carbon Black) */
+  --color-dark-background: #111111;
+  --color-dark-foreground: #F5F5F5;
+  --color-dark-card: #1A1A1A;
+  --color-dark-card-foreground: #F5F5F5;
+  --color-dark-elevated: #222222;
+  --color-dark-border: #333333;
+  --color-dark-text-primary: #F5F5F5;
+  --color-dark-text-secondary: #B3CCE0;
+  --color-dark-text-muted: #668DAC;
+  --color-dark-primary: #B3CCE0;
+  --color-dark-primary-foreground: #111111;
+  --color-dark-primary-hover: #8DADC6;
+  --color-dark-primary-light: #1A1A1A;
+  --color-dark-primary-lighter: #222222;
+  --color-dark-success: #B0C9AB;
+  --color-dark-success-foreground: #111111;
+  --color-dark-success-hover: #8BA685;
+  --color-dark-success-light: #193D11;
+  --color-dark-success-dark: #B0C9AB;
+  --color-dark-warning: #F39C12;
+  --color-dark-warning-foreground: #111111;
+  --color-dark-warning-hover: #B7950B;
+  --color-dark-warning-light: #332200;
+  --color-dark-danger: #E74C3C;
+  --color-dark-danger-foreground: #FFFFFF;
+  --color-dark-danger-hover: #C0392B;
+  --color-dark-danger-light: #331111;
+}
+
+/* Light Mode */
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --card: var(--color-card);
+  --card-foreground: var(--color-card-foreground);
+  --elevated: var(--color-elevated);
+  --border: var(--color-border);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-primary-foreground);
+  --primary-hover: var(--color-primary-hover);
+  --primary-light: var(--color-primary-light);
+  --primary-lighter: var(--color-primary-lighter);
+  --success: var(--color-success);
+  --success-foreground: var(--color-success-foreground);
+  --success-hover: var(--color-success-hover);
+  --success-light: var(--color-success-light);
+  --success-dark: var(--color-success-dark);
+  --warning: var(--color-warning);
+  --warning-foreground: var(--color-warning-foreground);
+  --warning-hover: var(--color-warning-hover);
+  --warning-light: var(--color-warning-light);
+  --danger: var(--color-danger);
+  --danger-foreground: var(--color-danger-foreground);
+  --danger-hover: var(--color-danger-hover);
+  --danger-light: var(--color-danger-light);
+}
+
+/* Dark Mode */
+.dark {
+  --background: var(--color-dark-background);
+  --foreground: var(--color-dark-foreground);
+  --card: var(--color-dark-card);
+  --card-foreground: var(--color-dark-card-foreground);
+  --elevated: var(--color-dark-elevated);
+  --border: var(--color-dark-border);
+  --text-primary: var(--color-dark-text-primary);
+  --text-secondary: var(--color-dark-text-secondary);
+  --text-muted: var(--color-dark-text-muted);
+  --primary: var(--color-dark-primary);
+  --primary-foreground: var(--color-dark-primary-foreground);
+  --primary-hover: var(--color-dark-primary-hover);
+  --primary-light: var(--color-dark-primary-light);
+  --primary-lighter: var(--color-dark-primary-lighter);
+  --success: var(--color-dark-success);
+  --success-foreground: var(--color-dark-success-foreground);
+  --success-hover: var(--color-dark-success-hover);
+  --success-light: var(--color-dark-success-light);
+  --success-dark: var(--color-dark-success-dark);
+  --warning: var(--color-dark-warning);
+  --warning-foreground: var(--color-dark-warning-foreground);
+  --warning-hover: var(--color-dark-warning-hover);
+  --warning-light: var(--color-dark-warning-light);
+  --danger: var(--color-dark-danger);
+  --danger-foreground: var(--color-dark-danger-foreground);
+  --danger-hover: var(--color-dark-danger-hover);
+  --danger-light: var(--color-dark-danger-light);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.font-brand {
+  font-family: var(--font-calistoga);
+}
+
+.font-mono {
+  font-family: var(--font-space-mono);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--elevated);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.dark ::selection {
+  background-color: var(--primary-dark);
+  color: var(--primary-foreground);
+}
+
+/* Utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+.animate-in {
+  animation: fadeIn 200ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #000;
+  }
+  .dark {
+    --border: #fff;
+  }
+}
